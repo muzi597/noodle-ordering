@@ -1,1 +1,20 @@
-{  "name": "noodle-ordering",  "private": true,  "workspaces": [    "apps/*",    "packages/*"  ]}
+{
+  "name": "noodle-ordering",
+  "private": true,
+  "scripts": {
+    "dev:api": "pnpm --filter @noodle/api start:dev",
+    "dev:kds": "pnpm --filter @noodle/kds-web dev",
+    "db:push": "pnpm --filter @noodle/api prisma:push",
+    "db:seed": "pnpm --filter @noodle/api prisma:seed",
+    "prisma:generate": "pnpm --filter @noodle/api prisma:generate"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@nestjs/core",
+      "@prisma/client",
+      "@prisma/engines",
+      "esbuild",
+      "prisma"
+    ]
+  }
+}
