@@ -4,6 +4,7 @@
   "scripts": {
     "dev:api": "pnpm --filter @noodle/api start:dev",
     "dev:kds": "pnpm --filter @noodle/kds-web dev",
+    "dev:customer": "pnpm --filter @noodle/customer-web dev",
     "db:push": "pnpm --filter @noodle/api prisma:push",
     "db:seed": "pnpm --filter @noodle/api prisma:seed",
     "prisma:generate": "pnpm --filter @noodle/api prisma:generate"
