@@ -1,50 +1,33 @@
 # Noodle Ordering
 
-## Quickstart Steps
+This repository is set up as a monorepo using pnpm workspaces for a food ordering system.
 
-1. Clone the repository:
+## Setup
+
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/muzi597/noodle-ordering.git
    cd noodle-ordering
    ```
 
-2. Start the services using Docker Compose:
+2. **Install dependencies**:
    ```bash
-   docker-compose up
+   pnpm install
    ```
 
-3. Access the API at `http://localhost:3000` and the KDS web app at `http://localhost:5173`.
+3. **Environment variables**: Create a `.env` file based on `.env.example`.
 
-## Local Development Steps
-
-1. Install dependencies:
+4. **Start the applications**:
    ```bash
-   npm install
-   ```
-2. Run the API:
-   ```bash
-   npm start --prefix apps/api
-   ```
-3. Run the KDS web app:
-   ```bash
-   npm start --prefix apps/kds-web
+   pnpm dev
    ```
 
-## Endpoints Summary
+## Environment Variables
 
-- **GET** `/orders`: Get a list of orders.
-- **POST** `/orders`: Create an order.
-- **GET** `/orders/:id`: Get a single order.
+- `DATABASE_URL`: Connection string for PostgreSQL database.
+- `WEBSOCKET_URL`: URL for WebSocket connection.
 
-## Project Structure
+## Available Scripts
 
-```
-noodle-ordering/
-├── apps/
-│   ├── api/             # NestJS API
-│   └── kds-web/         # Vite React KDS app
-├── docker-compose.yml    # Docker Compose configuration
-├── .env.example          # Environment variables
-├── package.json          # Root package.json
-└── README.md             # Project documentation
-```
+- `pnpm db:push`: Push database schema to PostgreSQL.
+- `pnpm db:seed`: Seed the database with initial data.
