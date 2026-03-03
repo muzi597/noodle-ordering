@@ -53,8 +53,21 @@ pnpm dev:api
 ```bash
 cp apps/kds-web/.env.example apps/kds-web/.env
 pnpm dev:kds
-# 访问 http://localhost:5173
+# 默认监听 0.0.0.0:5173，对本机及局域网均可访问：
+#   本机:    http://localhost:5173
+#   局域网:  http://<服务器IP>:5173
+# ⚠️  仅在可信网络环境下使用默认配置；公共网络请用 --host 127.0.0.1 限制访问。
 ```
+
+> **覆盖端口 / 主机**：在命令末尾用 `--` 分隔符传入 Vite 参数，
+> 根目录的 `scripts/dev-kds.sh` 包装脚本会自动去掉该分隔符并将剩余参数转发给 Vite。
+>
+> ```bash
+> # 仅改端口
+> pnpm dev:kds -- --port 5174
+> # 限制为本机访问并指定端口
+> pnpm dev:kds -- --host 127.0.0.1 --port 5173
+> ```
 
 ## 验收流程
 
