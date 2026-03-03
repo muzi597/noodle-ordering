@@ -24,7 +24,7 @@ export class KdsGateway {
     client.emit('joined', { shopId: data.shopId });
   }
 
-  notifyNewOrder(shopId: string, order: any) {
+  notifyNewOrder(shopId: string, order: Record<string, unknown>) {
     this.server.to(`shop:${shopId}`).emit('NEW_ORDER', order);
   }
 }

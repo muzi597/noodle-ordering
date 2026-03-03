@@ -38,7 +38,7 @@ cp .env.example apps/api/.env
 ```bash
 pnpm prisma:generate   # 生成 Prisma Client
 pnpm db:push           # 推送 schema 到数据库
-pnpm db:seed           # 写入演示数据（shop_demo + A1/A2/A3）
+pnpm db:seed           # 写入演示数据（shop_demo）
 ```
 
 ### 5. 启动 API（终端 1）
