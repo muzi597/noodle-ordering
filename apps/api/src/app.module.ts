@@ -3,8 +3,9 @@ import { PrismaModule } from './prisma/prisma.module';
 import { OrdersModule } from './orders/orders.module';
 import { KdsModule } from './kds/kds.module';
 import { GatewayModule } from './gateway/gateway.module';
+import { CustomerModule } from './customer/customer.module';
 
 @Module({
-  imports: [PrismaModule, GatewayModule, OrdersModule, KdsModule],
+  imports: [PrismaModule, GatewayModule, OrdersModule, KdsModule, CustomerModule],
 })
 export class AppModule {}
