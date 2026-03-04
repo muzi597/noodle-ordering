@@ -180,6 +180,7 @@ curl -s -X POST http://localhost:3000/api/customer/orders \
 | DATABASE_URL | - | PostgreSQL 连接串 |
 | PORT | 3000 | API 端口 |
 | CORS_ORIGIN | * | 允许的前端 Origin |
+| http://localhost:5173,http://localhost:5174 |
 | QR_SIGNING_SECRET | - | QR 码签名密钥（必填，用于 HMAC-SHA256 验签） |
 | VITE_API_URL (kds-web) | http://localhost:3000 | KDS 前端 API 地址 |
 | VITE_WS_URL (kds-web) | http://localhost:3000 | KDS 前端 WebSocket 地址 |
